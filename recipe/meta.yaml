@@ -22,9 +22,11 @@ requirements:
     - pytables
     - cython
     - pyqt
+    - qtpy
   run:
     - pytables
     - pyqt
+    - qtpy
 
 test:
   commands:
