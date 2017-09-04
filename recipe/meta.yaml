@@ -10,7 +10,7 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/uvemas/ViTables/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patch:
+  patches:
     - patches/0001-Remove-install_requires-from-setup.py.patch
 
 build:
@@ -21,16 +21,18 @@ requirements:
   build:
     - python
     - setuptools
-    - pytables
-    - cython
-    - pyqt
-    - qtpy
+    - pytables >=3.0
+    - cython 
+    - pyqt >=5.5.1
+    - qtpy >=1.2.1
   run:
-    - pytables
-    - pyqt
-    - qtpy
+    - pytables >=3.0
+    - pyqt >=5.5.1
+    - qtpy >=1.2.1
 
 test:
+  imports:
+    - vitables.utils
   commands:
     - test -f $PREFIX/bin/vitables  # [unix]
     - if not exist %PREFIX%\\Scripts\\vitables.exe exit 1  # [win]
