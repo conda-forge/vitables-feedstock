@@ -3,4 +3,3 @@
 meta.yaml text eol=lf
 build.sh text eol=lf
 bld.bat text eol=crlf
-recipe/patches/0001-Remove-install_requires-from-setup.py.patch text eol=crlf
