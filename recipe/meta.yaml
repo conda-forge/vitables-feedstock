@@ -10,12 +10,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/uvemas/ViTables/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - patches/0001-Remove-install_requires-from-setup.py.patch
 
 build:
   number: 2
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: pip install --no-deps .
 
 requirements:
   build:
@@ -25,6 +23,7 @@ requirements:
     - cython 
     - pyqt >=5.5.1
     - qtpy >=1.2.1
+    - pip
   run:
     - pytables >=3.0
     - pyqt >=5.5.1
