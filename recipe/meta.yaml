@@ -12,23 +12,26 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 2
+  script: pip install --no-deps .
 
 requirements:
   build:
     - python
     - setuptools
-    - pytables
-    - cython
-    - pyqt
-    - qtpy
+    - pytables >=3.0
+    - cython 
+    - pyqt >=5.5.1
+    - qtpy >=1.2.1
+    - pip
   run:
-    - pytables
-    - pyqt
-    - qtpy
+    - pytables >=3.0
+    - pyqt >=5.5.1
+    - qtpy >=1.2.1
 
 test:
+  imports:
+    - vitables.utils
   commands:
     - test -f $PREFIX/bin/vitables  # [unix]
     - if not exist %PREFIX%\\Scripts\\vitables.exe exit 1  # [win]
