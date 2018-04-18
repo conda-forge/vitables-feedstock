@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: pip install --no-deps .
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - python
     - setuptools
     - pytables >=3.0
-    - cython 
+    - cython
     - pyqt >=5.5.1
     - qtpy >=1.2.1
     - pip
