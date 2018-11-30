@@ -37,7 +37,7 @@ test:
     - vitables.utils  # [py37]
   commands:
     - test -f $PREFIX/bin/vitables  # [unix]
-    - $PREFIX/bin/vitables --help # [unix]
+    - $PREFIX/bin/vitables --help  # [unix]
     - if not exist %PREFIX%\\Scripts\\vitables.exe exit 1  # [win]
 
 about:
