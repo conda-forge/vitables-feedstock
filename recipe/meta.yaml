@@ -12,8 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  script: pip install --no-deps .
+  number: 1004
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: True  # [win and py2k]
 
 requirements:
   build:
@@ -33,9 +34,10 @@ requirements:
 
 test:
   imports:
-    - vitables.utils
+    - vitables.utils  # [py37]
   commands:
     - test -f $PREFIX/bin/vitables  # [unix]
+    - $PREFIX/bin/vitables --help  # [unix]
     - if not exist %PREFIX%\\Scripts\\vitables.exe exit 1  # [win]
 
 about:
