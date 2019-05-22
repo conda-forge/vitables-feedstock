@@ -1,0 +1,19 @@
+c_compiler:
+- vs2008
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+pin_run_as_build:
+  pyqt:
+    max_pin: x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+pyqt:
+- '5.9'
+python:
+- '2.7'
+zip_keys:
+- - python
+  - c_compiler
