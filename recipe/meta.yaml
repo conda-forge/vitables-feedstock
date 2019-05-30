@@ -13,7 +13,7 @@ source:
 
 build:
   number: 5
-  script: pip install --no-deps .
+  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
   skip: True  # [py<36]
 
 requirements:
