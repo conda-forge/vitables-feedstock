@@ -28,6 +28,7 @@ requirements:
     - qtpy >=1.2.1
     - pip
   run:
+    - python
     - pytables >=3.0
     - pyqt
     - qtpy >=1.2.1
