@@ -12,8 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  script: pip install --no-deps .
+  number: 5
+  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  skip: True  # [py<36]
 
 requirements:
   build:
@@ -27,6 +28,7 @@ requirements:
     - qtpy >=1.2.1
     - pip
   run:
+    - python
     - pytables >=3.0
     - pyqt
     - qtpy >=1.2.1
