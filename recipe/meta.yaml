@@ -1,19 +1,16 @@
-{% set name = "vitables" %}
 {% set version = "3.0.0" %}
-{% set sha256 = "b4067584a94b7270fe878ca53a474e0a60a9e63c43b9783991a69c3fb17ec291" %}
 
 package:
-  name: {{ name|lower }}
+  name: vitables
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/uvemas/ViTables/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: b4067584a94b7270fe878ca53a474e0a60a9e63c43b9783991a69c3fb17ec291
 
 build:
   number: 5
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [py<36]
 
 requirements:
@@ -21,12 +18,11 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
+    - pip
     - pytables >=3.0
     - cython
     - pyqt
     - qtpy >=1.2.1
-    - pip
   run:
     - python
     - pytables >=3.0
