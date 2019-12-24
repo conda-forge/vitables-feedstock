@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: vitables
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/uvemas/ViTables/archive/v{{ version }}.tar.gz
-  sha256: b4067584a94b7270fe878ca53a474e0a60a9e63c43b9783991a69c3fb17ec291
+  sha256: a3ab915e3e8bc06f2777e06a6e1c49b604e506641f84515ea4dc66e43b5c1b63
 
 build:
-  number: 5
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [py<36]
 
