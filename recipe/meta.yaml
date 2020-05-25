@@ -12,6 +12,8 @@ build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [py<36]
+  entry_points:
+    - vitables = vitables.start:gui
 
 requirements:
   build:
