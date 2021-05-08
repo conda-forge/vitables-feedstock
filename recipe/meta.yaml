@@ -23,11 +23,13 @@ requirements:
     - cython
     - pyqt
     - qtpy >=1.2.1
+    - setuptools
   run:
     - python
     - pytables >=3.0
     - pyqt
     - qtpy >=1.2.1
+    - setuptools
 
 test:
   imports:
