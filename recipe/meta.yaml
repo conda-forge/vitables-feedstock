@@ -38,7 +38,7 @@ test:
 
 about:
   home: http://vitables.org/
-  license: GPL v3
+  license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.txt
   summary: 'ViTables, a GUI for PyTables'
