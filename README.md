@@ -1,11 +1,11 @@
-About vitables
-==============
+About vitables-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vitables-feedstock/blob/main/LICENSE.txt)
 
 Home: http://vitables.org/
 
 Package license: GPL v3
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vitables-feedstock/blob/main/LICENSE.txt)
 
 Summary: ViTables, a GUI for PyTables
 
