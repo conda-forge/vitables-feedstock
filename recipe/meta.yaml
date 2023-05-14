@@ -9,9 +9,8 @@ source:
   sha256: 43a965a08124fe0e1974aed27a7149cdeaf75e8ae833e95a18a94d7d5bd506c8
 
 build:
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [py<36]
 
 requirements:
   build:
@@ -38,7 +37,7 @@ test:
 
 about:
   home: http://vitables.org/
-  license: GPL v3
+  license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.txt
   summary: 'ViTables, a GUI for PyTables'
