@@ -1,4 +1,4 @@
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: vitables
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/uvemas/ViTables/archive/v{{ version }}.tar.gz
-  sha256: 43a965a08124fe0e1974aed27a7149cdeaf75e8ae833e95a18a94d7d5bd506c8
+  sha256: 9f1747ff3ccc2963ece3252519bbc88216c85b66c12c819e96b8d71d92aab31e
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
   host:
     - python
     - pip
+    - hatchling
     - pytables >=3.0
     - cython
     - pyqt
@@ -43,7 +44,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'ViTables, a GUI for PyTables'
+  summary: ViTables, a GUI for PyTables
   description: |
     ViTables is a graphical tool for browsing and editing files in both PyTables
     and HDF5 format. With ViTables you can easily navigate through the data
