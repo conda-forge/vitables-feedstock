@@ -21,6 +21,7 @@ requirements:
   host:
     - python
     - pip
+    - hatchling
     - pytables >=3.0
     - cython
     - pyqt
