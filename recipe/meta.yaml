@@ -11,16 +11,17 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true # [py<310]
 
 requirements:
   build:
-    - python >=3.10                          # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
   host:
-    - python >=3.10
+    - python
     - pip
     - hatchling
     - pytables >=3.0
@@ -28,7 +29,7 @@ requirements:
     - pyqt
     - qtpy >=1.2.1
   run:
-    - python >=3.10
+    - python
     - pytables >=3.0
     - pyqt
     - qtpy >=1.2.1
